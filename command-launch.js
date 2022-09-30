@@ -9,7 +9,7 @@ async function gen(){
   const commands = [
   	new SlashCommandBuilder().setName('ping').setDescription("Bot latency"),
   	new SlashCommandBuilder().setName('64').setDescription("OOT64 Invite"),
-  	new SlashCommandBuilder().setName('cows').setDescription("Stop streaming SMOMusic"),
+  	new SlashCommandBuilder().setName('cows').setDescription("Link to a list of cow locations"),
   	new SlashCommandBuilder().setName('citra').setDescription("Citra info"),
 		new SlashCommandBuilder().setName('dump').setDescription("Dumping guide"),
 		new SlashCommandBuilder().setName('glossary').setDescription("Link to a list of acronyms"),
