@@ -449,7 +449,7 @@ client.on("messageCreate", async msg => {
 });
 client.on("interactionCreate", async command => {
   function perms(perm) {
-			return interaction.member.permissions.has(perm);
+			return command.member.permissions.has(perm);
 	}
 
 	let comm = command.commandName;
@@ -511,22 +511,13 @@ client.on("interactionCreate", async command => {
 		command.reply("For a list of external trackers, you can visit https://wiki.ootrandomizer.com/index.php?title=Trackers. There is an in-game tracker available by pressing Select during gameplay. (Note that this button can be changed during patch creation)");
 	}
 	if (comm.startsWith("update") && perms("MANAGE_MESSAGES")) {
-		let args = [];
-		let on = 0;
-		for (var i = 8; i < msg.content.length; i++) {
-			if (msg.content[i] !== "|") {
-				args[on] += msg.content[i];
-			} else {
-				on++;
-			}
-		}
-		db.latestNightly = args[0];
-		db.latestStable = args[1];
+		db.latestNightly = comm.options.getString('nightly');
+		db.latestStable = comm.options.getString('stable');
 		update();
     command.reply({content: "Updated", ephemeral: true });
 	}
 	if (comm.startsWith("pre") && perms("MANAGE_MESSAGES")) {
-		db.prefix = msg.content.slice(5, 1);
+		db.prefix = comm.options.getString('prefix');
 		command.reply("My new prefix is `" + db.prefix + "`. Type `!prefix` at any time regardless of prefix to check what it currently is.");
 	}
 	if (comm.startsWith("commands") || comm.startsWith("help")) {
