@@ -2,19 +2,11 @@ const {JSDOM} = require('jsdom');
 let db=require("./database.js").data;
 const fs=require("fs");
 const token = process.env['token'];
-const express = require('express');
-const fetch = require('@replit/node-fetch');
-const app = express();
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const DetectLanguage = require('detectlanguage');
 const langDetect = new DetectLanguage(process.env['detect_language_key']);
 const translate=require("translate");
-app.get('/', (req, res) => {
-  res.send('Bot online');
-});
 
-app.listen(3000, () => {
-  console.log('Website Server Started');
-});
 function save(){
 	fs.writeFileSync("./database.js","exports.data="+JSON.stringify(db));
 }
