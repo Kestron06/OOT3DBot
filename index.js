@@ -6,7 +6,7 @@ const express = require('express');
 const fetch = require('@replit/node-fetch');
 const app = express();
 const DetectLanguage = require('detectlanguage');
-const langDetect = new DetectLanguage("a4c20fcb36bd6671059de78c334a039c");
+const langDetect = new DetectLanguage(process.env['detect_language_key']);
 const translate=require("translate");
 app.get('/', (req, res) => {
   res.send('Bot online');
