@@ -281,6 +281,7 @@ client.on("messageCreate", async msg => {
 		if (comm.startsWith("pre") && perms("MANAGE_MESSAGES")) {
 			db.prefix = msg.content.slice(5, 1);
 			msg.channel.send("My new prefix is `" + db.prefix + "`. Type `!prefix` at any time regardless of prefix to check what it currently is.");
+			update();
 		}
 		if (comm.startsWith("commands") || comm.startsWith("help")) {
 			msg.channel.send(`My current commands include the following:\n\`\`\`\n${db.prefix}ping\n${db.prefix}64\n${db.prefix}cows\n${db.prefix}citra\n${db.prefix}dump\n${db.prefix}glossary\n${db.prefix}grottos\n${db.prefix}hash\n${db.prefix}latest\n${db.prefix}logic\n${db.prefix}letter\n${db.prefix}log\n${db.prefix}multiworld\n${db.prefix}progressive\n${db.prefix}rom\n${db.prefix}scrub\n${db.prefix}source\n${db.prefix}texture\n${db.prefix}tracker\n${db.prefix}update (Admin only, contact Kestron for syntax)\n${db.prefix}pre (Admin only, change prefix)\n${db.prefix}commands\n${db.prefix}help\n!prefix (Prefix for this command is always "!")\n${db.prefix}hint (Parses the last spoiler log, or the one you reply to for hints)\`\`\``);
