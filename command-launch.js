@@ -3,7 +3,7 @@ async function gen(){
   const { SlashCommandBuilder } = require('@discordjs/builders');
   const { ContextMenuCommandBuilder } = require('@discordjs/builders');
   const { REST } = require('@discordjs/rest');
-  const { Routes } = require('discord-api-types/v9');
+  const { Routes, PermissionFlagsBits } = require('discord-api-types/v9');
 	let clientId=process.env["client_id"];
   
   const commands = [
@@ -26,8 +26,11 @@ async function gen(){
 	new SlashCommandBuilder().setName('source').setDescription("OOT3DR Source Code"),
 	new SlashCommandBuilder().setName('texture').setDescription("Texture Pack info"),
 	new SlashCommandBuilder().setName('tracker').setDescription("Explains trackers"),
-	new SlashCommandBuilder().setName('update').setDescription("Admin only").setDefaultMemberPermissions('MANAGE_MESSAGES'),
-	new SlashCommandBuilder().setName('pre').setDescription("Admin only").setDefaultMemberPermissions('MANAGE_MESSAGES'),
+	new SlashCommandBuilder().setName('update').setDescription("Admin only").setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+		.addStringOption(o => o.setName('nightly').setDescription('Latest nightly version').setRequired(true))
+		.addStringOption(o => o.setName('stable').setDescription('Latest stable version').setRequired(true)),
+	new SlashCommandBuilder().setName('pre').setDescription("Admin only").setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+		.addStringOption(o => o.setName('prefix').setDescription('New prefix').setRequired(true)),
 	new SlashCommandBuilder().setName('commands').setDescription("Help Menu"),
 	new SlashCommandBuilder().setName('help').setDescription("Help Menu"),/*
 	new SlashCommandBuilder().setName('translate').setDescription("Translate")
