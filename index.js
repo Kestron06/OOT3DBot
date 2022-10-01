@@ -217,7 +217,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("A list of cows in Ocarina of Time can be found here.\nhttps://wiki.ootrandomizer.com/index.php?title=Cows");
 		}
 		if (comm.startsWith("citra")) {
-			msg.channel.send("If you would like to play on PC or Android, you can use Citra. https://citra-emu.org/.\nPlease note that to play with Citra, you will still need a copy of OOT3D. Type " + db.prefix + "dump for the guide to dumping your copy.");
+			msg.channel.send("If you would like to play on PC or Android, you can use Citra. <https://citra-emu.org/>.\nPlease note that to play with Citra, you will still need a copy of OOT3D. Type " + db.prefix + "dump for the guide to dumping your copy.");
 		}
 		if (comm.startsWith("dump")) {
 			msg.channel.send("To dump a cart of OOT3D, you will need to follow the steps listed here.\nhttps://3ds.hacks.guide/dumping-titles-and-game-cartridges\nNote that a 3DS with CFW installed is required. To install CFW, start here.\nhttps://3ds.hacks.guide/get-started");
@@ -259,7 +259,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("The randomizer is completely open-source. You can view the source code here: https://github.com/gamestabled/OoT3D_Randomizer");
 		}
 		if (comm.startsWith("texture")) {
-			msg.channel.send("Texture packs only work while playing in Citra emulator (Type `!citra` for more information). A list of texture packs, including a high resolution 4k pack, can be found here. https://gamebanana.com/mods/cats/10842");
+			msg.channel.send("Texture packs only work while playing in Citra emulator (Type `!citra` for more information). A list of texture packs, including a high resolution 4k pack, can be found here. <https://gamebanana.com/mods/cats/10842>");
 		}
 		if (comm.startsWith("tracker")) {
 			msg.channel.send("For a list of external trackers, you can visit https://wiki.ootrandomizer.com/index.php?title=Trackers. There is an in-game tracker available by pressing Select during gameplay. (Note that this button can be changed during patch creation)");
