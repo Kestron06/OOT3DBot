@@ -250,7 +250,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("Progressive items are those that always start in their weakest form and get upgraded each time you find another. For example, there are two progressive hookshots. If you find one, it doesn't matter which one it is, you will get a normal hookshot. As soon as you find the other one, you will have a longshot. Below is a list of items that are considered progressive. ```\nFairy Ocarina > Ocarina of Time\nHookshot > Longshot\nBomb Bag > Big Bomb Bag > Biggest Bomb Bag\nGoron Bracelet > Silver Gauntlets > Gold Gauntlets\nSlingshot > Big Bullet Bag > Biggest Bullet Bag\nBow > Big Quiver > Biggest Quiver\nSilver Scale > Gold Scale\nBase Wallet (Start With) > Adult's Wallet > Giant's Wallet > Tycoon's Wallet (Randomizer Shop-Sanity Exclusive)\nMagic Meter > Big Magic Meter\nDeku Stick Capacity Upgrades\nDeku Nut Capacity Upgrades");
 		}
 		if (comm.startsWith("rom")) {
-			msg.channel.send("For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>");
+			msg.channel.send({files:["https://raw.githubusercontent.com/SMOMusic/OOT3DBot/main/piracy.png"],content:"For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>"});
 		}
 		if (comm.startsWith("scrub")) {
 			msg.channel.send("For a list of all Business Scrubs and where to find them, visit https://wiki.ootrandomizer.com/index.php?title=Scrubs");
@@ -497,7 +497,7 @@ client.on("interactionCreate", async command => {
 		command.reply("Progressive items are those that always start in their weakest form and get upgraded each time you find another. For example, there are two progressive hookshots. If you find one, it doesn't matter which one it is, you will get a normal hookshot. As soon as you find the other one, you will have a longshot. Below is a list of items that are considered progressive. ```\nFairy Ocarina > Ocarina of Time\nHookshot > Longshot\nBomb Bag > Big Bomb Bag > Biggest Bomb Bag\nGoron Bracelet > Silver Gauntlets > Gold Gauntlets\nSlingshot > Big Bullet Bag > Biggest Bullet Bag\nBow > Big Quiver > Biggest Quiver\nSilver Scale > Gold Scale\nBase Wallet (Start With) > Adult's Wallet > Giant's Wallet > Tycoon's Wallet (Randomizer Shop-Sanity Exclusive)\nMagic Meter > Big Magic Meter\nDeku Stick Capacity Upgrades\nDeku Nut Capacity Upgrades");
 	}
 	if (comm.startsWith("rom")) {
-		command.reply("For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>");
+		command.reply({files:["https://raw.githubusercontent.com/SMOMusic/OOT3DBot/main/piracy.png"],content:"For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>"});
 	}
 	if (comm.startsWith("scrub")) {
 		command.reply("For a list of all Business Scrubs and where to find them, visit https://wiki.ootrandomizer.com/index.php?title=Scrubs");
