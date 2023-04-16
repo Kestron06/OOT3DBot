@@ -217,7 +217,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("A list of cows in Ocarina of Time can be found here.\nhttps://wiki.ootrandomizer.com/index.php?title=Cows");
 		}
 		if (comm.startsWith("citra")) {
-			msg.channel.send("If you would like to play on PC or Android, you can use Citra. https://citra-emu.org/.\nPlease note that to play with Citra, you will still need a copy of OOT3D. Type " + db.prefix + "dump for the guide to dumping your copy.");
+			msg.channel.send("If you would like to play on PC or Android, you can use Citra. <https://citra-emu.org/>.\nPlease note that to play with Citra, you will still need a copy of OOT3D. Type " + db.prefix + "dump for the guide to dumping your copy.");
 		}
 		if (comm.startsWith("dump")) {
 			msg.channel.send("To dump a cart of OOT3D, you will need to follow the steps listed here.\nhttps://3ds.hacks.guide/dumping-titles-and-game-cartridges\nNote that a 3DS with CFW installed is required. To install CFW, start here.\nhttps://3ds.hacks.guide/get-started");
@@ -237,11 +237,11 @@ client.on("messageCreate", async msg => {
 		if (comm.startsWith("logic")) {
 			msg.channel.send("Logic in this context refers to how the randomizer places items. It helps to ensure that every seed is beatable in the way the player would like to play it.\n```\nGlitchless - Beat the seed with no glitches involved\nGlitched - For experienced players, requires the use of glitches to beat but is still possible.\nNo Logic - No logic is used during patch creation. Heavy use of glitches are required and it may be impossible to beat.\nVanilla - Play the game with all items in the normal spots, but with the other features the randomizer provides still available.```\nFor help with different logic tricks, visit https://wiki.ootrandomizer.com/index.php?title=Logic");
 		}
-		if (comm.startsWith("letter")) {
-			msg.channel.send("Zelda's Letter cannot be randomized. This is due to the nature of the item. It starts out as the Weird Egg. After it becomes a cucco and is utilized to wake Talon, it will become Zelda's Letter after talking to Zelda. As such if you would like to randomize Zelda's Letter, you can do so by randomizing the Weird Egg.");
+		else if (comm.startsWith("log")) {
+			msg.channel.send("The spoiler log is a list of all item locations and can be useful when there seems to be a logic bug or you can't find an item. ```\nConsole - If you go into your SD Card's files, you can find it under 3ds. Its name will reflect that of your seed hash. (Type `!hash` for an explanation)\n\nCitra - You will need to locate your Citra installation. You can do this by opening Citra, right clicking in the menu, and then pressing 'Open Citra Folder'. If you are on an Android device, this will be under citra-emu in your device's storage. You can then go to /sdmc/3ds. Its name will reflect that of your seed hash.```");
 		}
-		if (comm.startsWith("log")) {
-			msg.channel.send("The spoiler log is a list of all item locations and can be useful when there seems to be a logic bug or you can't find an item. ```\nConsole - If you go into your SD Card's files, you can find it under 3ds. It's name will reflect that of your seed hash. (Type `!hash` for an explanation)\n\nCitra - You will need to locate your Citra installation. You can do this by opening Citra, right clicking in the menu, and then pressing 'Open Citra Folder'. If you are on an Android device, this will be under citra-emu in your device's storage. You can then go to /sdmc/3ds. It's name will reflect that of your seed hash.```");
+		if (comm.startsWith("letter")) {
+			msg.channel.send("If on an older version, Zelda's Letter cannot be randomized. This is due to the nature of the item. It starts out as the Weird Egg. After it becomes a cucco and is utilized to wake Talon, it will become Zelda's Letter after talking to Zelda. As such if you would like to randomize Zelda's Letter, you can do so by randomizing the Weird Egg.");
 		}
 		if (comm.startsWith("multiworld")) {
 			msg.channel.send("Multiworld is currently not available for OOT3D.");
@@ -250,7 +250,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("Progressive items are those that always start in their weakest form and get upgraded each time you find another. For example, there are two progressive hookshots. If you find one, it doesn't matter which one it is, you will get a normal hookshot. As soon as you find the other one, you will have a longshot. Below is a list of items that are considered progressive. ```\nFairy Ocarina > Ocarina of Time\nHookshot > Longshot\nBomb Bag > Big Bomb Bag > Biggest Bomb Bag\nGoron Bracelet > Silver Gauntlets > Gold Gauntlets\nSlingshot > Big Bullet Bag > Biggest Bullet Bag\nBow > Big Quiver > Biggest Quiver\nSilver Scale > Gold Scale\nBase Wallet (Start With) > Adult's Wallet > Giant's Wallet > Tycoon's Wallet (Randomizer Shop-Sanity Exclusive)\nMagic Meter > Big Magic Meter\nDeku Stick Capacity Upgrades\nDeku Nut Capacity Upgrades");
 		}
 		if (comm.startsWith("rom")) {
-			msg.channel.send("For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>");
+			msg.channel.send({files:["https://raw.githubusercontent.com/SMOMusic/OOT3DBot/main/piracy.png"],content:"For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>"});
 		}
 		if (comm.startsWith("scrub")) {
 			msg.channel.send("For a list of all Business Scrubs and where to find them, visit https://wiki.ootrandomizer.com/index.php?title=Scrubs");
@@ -259,7 +259,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send("The randomizer is completely open-source. You can view the source code here: https://github.com/gamestabled/OoT3D_Randomizer");
 		}
 		if (comm.startsWith("texture")) {
-			msg.channel.send("Texture packs only work while playing in Citra emulator (Type `!citra` for more information). A list of texture packs, including a high resolution 4k pack, can be found here. https://gamebanana.com/mods/cats/10842");
+			msg.channel.send("Texture packs only work while playing in Citra emulator (Type `!citra` for more information). A list of texture packs, including a high resolution 4k pack, can be found here. <https://gamebanana.com/mods/cats/10842>");
 		}
 		if (comm.startsWith("tracker")) {
 			msg.channel.send("For a list of external trackers, you can visit https://wiki.ootrandomizer.com/index.php?title=Trackers. There is an in-game tracker available by pressing Select during gameplay. (Note that this button can be changed during patch creation)");
@@ -281,9 +281,13 @@ client.on("messageCreate", async msg => {
 		if (comm.startsWith("pre") && perms("MANAGE_MESSAGES")) {
 			db.prefix = msg.content.slice(5, 1);
 			msg.channel.send("My new prefix is `" + db.prefix + "`. Type `!prefix` at any time regardless of prefix to check what it currently is.");
+			update();
 		}
 		if (comm.startsWith("commands") || comm.startsWith("help")) {
-			msg.channel.send(`My current commands include the following:\n\`\`\`\n${db.prefix}ping\n${db.prefix}64\n${db.prefix}cows\n${db.prefix}citra\n${db.prefix}dump\n${db.prefix}glossary\n${db.prefix}grottos\n${db.prefix}hash\n${db.prefix}latest\n${db.prefix}logic\n${db.prefix}letter\n${db.prefix}log\n${db.prefix}multiworld\n${db.prefix}progressive\n${db.prefix}rom\n${db.prefix}scrub\n${db.prefix}source\n${db.prefix}texture\n${db.prefix}tracker\n${db.prefix}update (Admin only, contact Kestron for syntax)\n${db.prefix}pre (Admin only, change prefix)\n${db.prefix}commands\n${db.prefix}help\n!prefix (Prefix for this command is always "!")\n${db.prefix}hint (Parses the last spoiler log, or the one you reply to for hints)\`\`\``);
+			msg.channel.send(`My current commands include the following:\n\`\`\`\n${db.prefix}ping\n${db.prefix}mm3dr\n${db.prefix}64\n${db.prefix}cows\n${db.prefix}citra\n${db.prefix}dump\n${db.prefix}glossary\n${db.prefix}grottos\n${db.prefix}hash\n${db.prefix}latest\n${db.prefix}logic\n${db.prefix}letter\n${db.prefix}log\n${db.prefix}multiworld\n${db.prefix}progressive\n${db.prefix}rom\n${db.prefix}scrub\n${db.prefix}source\n${db.prefix}texture\n${db.prefix}tracker\n${db.prefix}update (Admin only, contact Kestron for syntax)\n${db.prefix}pre (Admin only, change prefix)\n${db.prefix}commands\n${db.prefix}help\n!prefix (Prefix for this command is always "!")\n${db.prefix}hint (Parses the last spoiler log, or the one you reply to for hints)\`\`\``);
+		}
+		if(comm.startsWith("mm3dr"){
+		   	msg.channel.send("There is currently a Majora's Mask 3D Randomizer in progress, but it is not available to or ready to be played by the public.");
 		}
 		if (comm.startsWith("makepreset")) {
 			let spoil = fs.readFileSync("./latestSpoiler.xml", "utf8");
@@ -487,7 +491,7 @@ client.on("interactionCreate", async command => {
 		command.reply("Zelda's Letter cannot be randomized. This is due to the nature of the item. It starts out as the Weird Egg. After it becomes a cucco and is utilized to wake Talon, it will become Zelda's Letter after talking to Zelda. As such if you would like to randomize Zelda's Letter, you can do so by randomizing the Weird Egg.");
 	}
 	if (comm.startsWith("log")) {
-		command.reply("The spoiler log is a list of all item locations and can be useful when there seems to be a logic bug or you can't find an item. ```\nConsole - If you go into your SD Card's files, you can find it under 3ds. It's name will reflect that of your seed hash. (Type `!hash` for an explanation)\n\nCitra - You will need to locate your Citra installation. You can do this by opening Citra, right clicking in the menu, and then pressing 'Open Citra Folder'. If you are on an Android device, this will be under citra-emu in your device's storage. You can then go to /sdmc/3ds. It's name will reflect that of your seed hash.```");
+		command.reply("The spoiler log is a list of all item locations and can be useful when there seems to be a logic bug or you can't find an item. ```\nConsole - If you go into your SD Card's files, you can find it under 3ds. Its name will reflect that of your seed hash. (Type `!hash` for an explanation)\n\nCitra - You will need to locate your Citra installation. You can do this by opening Citra, right clicking in the menu, and then pressing 'Open Citra Folder'. If you are on an Android device, this will be under citra-emu in your device's storage. You can then go to /sdmc/3ds. Its name will reflect that of your seed hash.```");
 	}
 	if (comm.startsWith("multiworld")) {
 		command.reply("Multiworld is currently not available for OOT3D.");
@@ -496,7 +500,7 @@ client.on("interactionCreate", async command => {
 		command.reply("Progressive items are those that always start in their weakest form and get upgraded each time you find another. For example, there are two progressive hookshots. If you find one, it doesn't matter which one it is, you will get a normal hookshot. As soon as you find the other one, you will have a longshot. Below is a list of items that are considered progressive. ```\nFairy Ocarina > Ocarina of Time\nHookshot > Longshot\nBomb Bag > Big Bomb Bag > Biggest Bomb Bag\nGoron Bracelet > Silver Gauntlets > Gold Gauntlets\nSlingshot > Big Bullet Bag > Biggest Bullet Bag\nBow > Big Quiver > Biggest Quiver\nSilver Scale > Gold Scale\nBase Wallet (Start With) > Adult's Wallet > Giant's Wallet > Tycoon's Wallet (Randomizer Shop-Sanity Exclusive)\nMagic Meter > Big Magic Meter\nDeku Stick Capacity Upgrades\nDeku Nut Capacity Upgrades");
 	}
 	if (comm.startsWith("rom")) {
-		command.reply("For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>");
+		command.reply({files:["https://raw.githubusercontent.com/SMOMusic/OOT3DBot/main/piracy.png"],content:"For a guide on how to dump titles you own, type `" + db.prefix + "dump`. To obtain a free copy of any game go to <https://tinyurl.com/AllNintendoRoms>"});
 	}
 	if (comm.startsWith("scrub")) {
 		command.reply("For a list of all Business Scrubs and where to find them, visit https://wiki.ootrandomizer.com/index.php?title=Scrubs");
