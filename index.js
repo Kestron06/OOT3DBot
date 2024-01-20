@@ -287,7 +287,7 @@ client.on("messageCreate", async msg => {
 			msg.channel.send(`My current commands include the following:\n\`\`\`\n${db.prefix}ping\n${db.prefix}mm3dr\n${db.prefix}64\n${db.prefix}cows\n${db.prefix}citra\n${db.prefix}dump\n${db.prefix}glossary\n${db.prefix}grottos\n${db.prefix}hash\n${db.prefix}latest\n${db.prefix}logic\n${db.prefix}letter\n${db.prefix}log\n${db.prefix}multiworld\n${db.prefix}progressive\n${db.prefix}rom\n${db.prefix}scrub\n${db.prefix}source\n${db.prefix}texture\n${db.prefix}tracker\n${db.prefix}update (Admin only, contact Kestron for syntax)\n${db.prefix}pre (Admin only, change prefix)\n${db.prefix}commands\n${db.prefix}help\n!prefix (Prefix for this command is always "!")\n${db.prefix}hint (Parses the last spoiler log, or the one you reply to for hints)\`\`\``);
 		}
 		if(comm.startsWith("mm3dr")){
-		   	msg.channel.send("There is currently a Majora's Mask 3D Randomizer in progress, but it is not available to or ready to be played by the public.");
+		   	msg.channel.send("[The Majora's Mask 3D Randomizer](https://discord.com/invite/73ZNdjbfFp) is now available and can be found at <https://github.com/Z3DR/MM3D_Randomizer>");
 		}
 		if (comm.startsWith("makepreset")) {
 			let spoil = fs.readFileSync("./latestSpoiler.xml", "utf8");
