@@ -1,2 +1,4 @@
 node_modules/
-settings.js
+env.json
+commands.json
+latestSpoiler.json

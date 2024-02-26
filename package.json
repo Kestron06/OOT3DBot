@@ -1,27 +1,6 @@
 {
-  "name": "oot3dbot",
-  "version": "1.0.0",
-  "description": "Discord bot for the Ocarina of Time 3D Randomizer bot",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SMOMusic/OOT3DBot.git"
-  },
-  "author": "Kestron",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/SMOMusic/OOT3DBot/issues"
-  },
-  "homepage": "https://github.com/SMOMusic/OOT3DBot",
   "dependencies": {
-    "@discordjs/rest": "^1.2.0",
-    "detectlanguage": "^2.1.0",
-    "discord.js": "^13.11.0",
-    "jsdom": "^20.0.0",
-    "node-fetch": "^3.2.10",
-    "translate": "^1.4.1"
+    "discord.js": "^14.14.1",
+    "xml2js": "^0.6.2"
   }
 }
